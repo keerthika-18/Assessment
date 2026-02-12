@@ -15,7 +15,7 @@ namespace Pastry_Management_System
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
-        public DateTime? AddedDate { get; set; }
+       
     }
 
     public partial class Products : System.Web.UI.Page
@@ -202,7 +202,7 @@ namespace Pastry_Management_System
                     tran.Rollback();
                     throw;
                 }
-            }
+            }//exception handling can be improved by logging the error and showing a user-friendly message instead of rethrowing it.
         }
 
 
